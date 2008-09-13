@@ -1,0 +1,29 @@
+Ya que no es una impresora que la enchufas y te levanta los drivers porque la misma se lo informa a la compu, esta no se da cuenta que enchufas nada entonces hay que cargar los modulos a manopla:
+
+modprobe parport
+modprobe ppdev
+modprobe lp
+rmmod lp
+
+(tengo que cargar el modulo lp y despues bajarlo, no me preguntes porque)
+
+luego para que acceda al puerto tu usuario tiene que poder acceder a
+
+/dev/parport0
+
+asi que o le cambias los permisos a parport0 o haces que tu usuario pertenezca al grupo o lo corres como root.
+
+, no hay mucha mas vuelta.
+
+Si tengo tiempo adoso la documentacion y creo un paquete .deb
+
+los paquetes que tenes que tener instalado para que funcione, tanto en debian como ubuntu son:
+
+python-parallel glade-2
+
+en realidad el glade-2 no es necesario (solo si queres tocar codigo ) pero si algunas dependencias que trae y es mas facil usarlo asi, despues si lees el archivo autitux.py vas a entender enseguida las opciones.
+
+
+SKA
+
+
